@@ -8,11 +8,11 @@ interface ConfigProviderProps {
 }
 
 export const ConfigProvider = ({ children }: ConfigProviderProps) => {
-  const cfg: Config = {
+  const config: Config = {
     appVersion: __APP_VERSION__,
   };
 
-  return <ConfigContext.Provider value={cfg}>{children}</ConfigContext.Provider>;
+  return <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>;
 };
 
 export const useConfig = (): Config => {

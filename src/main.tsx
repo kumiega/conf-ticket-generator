@@ -6,34 +6,35 @@ import { fetchCharacter, fetchCharacters } from './loaders/CharacterLoader';
 import { CharacterRouteParams } from './types/types';
 import { ConfigProvider } from './context/ConfigContext';
 
-const Characters = lazy(() => import('./pages/Characters'));
-const CharacterDetails = lazy(() => import('./pages/CharacterDetails'));
+// const Characters = lazy(() => import('./pages/Characters'));
+// const CharacterDetails = lazy(() => import('./pages/CharacterDetails'));
 
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        index: true,
-        loader: fetchCharacters,
-        element: <Characters />,
-      },
-      {
-        path: 'character/:id',
-        loader: async ({ params }) => {
-          return fetchCharacter({ params } as CharacterRouteParams);
-        },
-        element: <CharacterDetails />,
-      },
-    ],
-  },
-]);
+// const router = createHashRouter([
+//   {
+//     path: '/',
+//     element: <App />,
+//     children: [
+//       {
+//         index: true,
+//         loader: fetchCharacters,
+//         element: <Characters />,
+//       },
+//       {
+//         path: 'character/:id',
+//         loader: async ({ params }) => {
+//           return fetchCharacter({ params } as CharacterRouteParams);
+//         },
+//         element: <CharacterDetails />,
+//       },
+//     ],
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
   <React.StrictMode>
     <ConfigProvider>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <App />
     </ConfigProvider>
   </React.StrictMode>,
 );
