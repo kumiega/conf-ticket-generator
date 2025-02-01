@@ -35,6 +35,7 @@
     "vitest": "3.0.4"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "4.0.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router-dom": "7.1.5"
