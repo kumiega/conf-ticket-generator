@@ -4,7 +4,7 @@ import { RouterProvider, createHashRouter } from 'react-router-dom';
 import App from './App';
 import { fetchCharacter, fetchCharacters } from './loaders/CharacterLoader';
 import { CharacterRouteParams } from './types/types';
-import { ConfigProvider } from './context/ConfigContext';
+import { ConfigProvider } from './context/config-context';
 
 // const Characters = lazy(() => import('./pages/Characters'));
 // const CharacterDetails = lazy(() => import('./pages/CharacterDetails'));
