@@ -82,6 +82,6 @@ body {
 
 .bg {
     background-image: url("./src/assets/images/pattern-lines.svg");
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
 }
