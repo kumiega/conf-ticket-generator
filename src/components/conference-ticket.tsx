@@ -1,5 +1,7 @@
 import type { Ticket } from '@/types/types';
 
+import iconGithub from '@/assets/images/icon-github.svg';
+
 const ConferenceTicket = ({ ticket }: { ticket: Ticket }) => {
   const avatar = URL.createObjectURL(ticket.avatar);
 
@@ -24,11 +26,7 @@ const ConferenceTicket = ({ ticket }: { ticket: Ticket }) => {
           <div>
             <p className="text-2xl sm:text-4xl font-medium">{ticket.fullName}</p>
             <p className="flex items-center gap-1 opacity-70">
-              <img
-                src="./src/assets/images/icon-github.svg"
-                className="w-6 h-6"
-                alt="Github logo"
-              />
+              <img src={iconGithub} className="w-6 h-6" alt="Github logo" />
               <span className="text-xl mt-1 sm:mt-0">{ticket.github}</span>
             </p>
           </div>
