@@ -3,6 +3,9 @@ import { UseFormSetValue } from 'react-hook-form';
 import { useState } from 'react';
 import Button from '@/components/button';
 
+import iconUpload from '@/assets/images/icon-upload.svg';
+import iconInfo from '@/assets/images/icon-info.svg';
+
 interface UploadAvatarProps {
   error?: string;
   setValue: UseFormSetValue<any>;
@@ -113,12 +116,7 @@ const UploadAvatar = ({ error, setValue }: UploadAvatarProps) => {
         ) : (
           <div className="text-center">
             <div className="mx-auto max-w-fit p-4 bg-neutral-700 rounded-xl mb-5">
-              <img
-                src="./src/assets/images/icon-upload.svg"
-                className="w-8 h-8"
-                alt=""
-                role="presentation"
-              />
+              <img src={iconUpload} className="w-8 h-8" alt="" role="presentation" />
             </div>
             <p>Drop your photo here or click to upload</p>
           </div>
@@ -136,12 +134,7 @@ const UploadAvatar = ({ error, setValue }: UploadAvatarProps) => {
           </p>
         ) : (
           <p className="flex gap-2 items-center text-sm mt-3">
-            <img
-              src="./src/assets/images/icon-info.svg"
-              className="w-6 h-6"
-              alt=""
-              role="presentation"
-            />
+            <img src={iconInfo} className="w-6 h-6" alt="" role="presentation" />
             <span>Upload your photo (JPG or PNG, max size: 500kB)</span>
           </p>
         )}
