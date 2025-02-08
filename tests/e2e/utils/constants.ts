@@ -1,4 +1,4 @@
 export const URLs = {
-  CHARACTERS_PAGE: '/',
-  CHARACTER_DETAILS_PAGE: (id) => `/#/character/${id}`,
+  SIGNUP_PAGE: '/',
+  TICKET_PAGE: '/ticket',
 };

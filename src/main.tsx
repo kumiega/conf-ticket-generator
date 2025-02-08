@@ -1,39 +1,29 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createHashRouter } from 'react-router-dom';
-import App from './App';
-import { fetchCharacter, fetchCharacters } from './loaders/CharacterLoader';
-import { CharacterRouteParams } from './types/types';
-import { ConfigProvider } from './context/ConfigContext';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
-const Characters = lazy(() => import('./pages/Characters'));
-const CharacterDetails = lazy(() => import('./pages/CharacterDetails'));
+import { ConfigProvider } from '@/context/config-context';
+import { TicketProvider } from '@/context/ticket-context';
 
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        index: true,
-        loader: fetchCharacters,
-        element: <Characters />,
-      },
-      {
-        path: 'character/:id',
-        loader: async ({ params }) => {
-          return fetchCharacter({ params } as CharacterRouteParams);
-        },
-        element: <CharacterDetails />,
-      },
-    ],
-  },
-]);
+import AppLayout from '@/components/app-layout';
+import NoMatch from '@/pages/no-match';
+import SignUp from '@/pages/sign-up';
+import Ticket from '@/pages/ticket';
 
 ReactDOM.createRoot(document.getElementById('app') as HTMLElement).render(
   <React.StrictMode>
     <ConfigProvider>
-      <RouterProvider router={router} />
+      <TicketProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<AppLayout />}>
+              <Route index element={<SignUp />} />
+              <Route path="ticket" element={<Ticket />} />
+              <Route path="*" element={<NoMatch />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </TicketProvider>
     </ConfigProvider>
   </React.StrictMode>,
 );
