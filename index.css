@@ -1,16 +1,87 @@
 @import "tailwindcss";
 
-:root {
-    --clr-dark: #030214;
+@font-face {
+    font-family: "Inconsolata";
+    src: url("./src/assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
+    font-weight: 400 800;
+}
 
-    --clr-neutral-0: hsl(0, 0%, 100%);
-    --clr-neutral-300: hsl(252, 6%, 83%);
-    --clr-neutral-500: hsl(245, 15%, 58%);
-    --clr-neutral-700: hsl(245, 19%, 35%);
-    --clr-neutral-900: rgb(12, 8, 43);
+@theme {
+    --breakpoint-desktop: 90rem;
 
-    --clr-orange-500: hsl(7, 88%, 67%);
-    --clr-orange-700: hsl(7, 71%, 60%);
+    --color-neutral-0: hsl(0, 0%, 100%);
+    --color-neutral-300: hsl(252, 6%, 83%);
+    --color-neutral-500: hsl(245, 15%, 58%);
+    --color-neutral-700: hsl(245, 19%, 35%);
+    --color-neutral-900: rgb(12, 8, 43);
 
-    --gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+    --color-dark: hsl(243, 82%, 4%);
+
+    --color-orange-500: hsl(7, 86%, 67%);
+    --color-orange-700: hsl(7, 71%, 60%);
+}
+
+body {
+    position: relative;
+    background-image: url("./src/assets/images/background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Inconsolata", monospace;
+    min-height: 100vh;
+    height: 100%;
+    background-position: right;
+
+    /* tablet - 1024px */
+    @media (min-width: 64rem) {
+        background-image: url("./src/assets/images/background-mobile.png");
+    }
+
+    /* tablet - 1024px */
+    @media (min-width: 90rem) {
+        background-image: url("./src/assets/images/background-desktop.png");
+    }
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.ticket {
+    background-image: url("./src/assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 15/7;
+    margin-inline: auto;
+    position: relative;
+}
+
+.ticket-number {
+    position: absolute;
+    z-index: 10;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.text-box-trim {
+    text-box: trim-both cap alphabetic;
+}
+
+@supports (not (text-box: trim-both cap alphabetic)) {
+    .text-box-trim {
+        margin-top: -0.5rem;
+    }
+}
+
+.bg {
+    background-image: url("./src/assets/images/pattern-lines.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
