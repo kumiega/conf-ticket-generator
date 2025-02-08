@@ -1,6 +1,7 @@
 import type { Ticket } from '@/types/types';
 
 import iconGithub from '@/assets/images/icon-github.svg';
+import logo from '@/assets/images/logo-full.svg';
 
 const ConferenceTicket = ({ ticket }: { ticket: Ticket }) => {
   const avatar = URL.createObjectURL(ticket.avatar);
@@ -9,11 +10,7 @@ const ConferenceTicket = ({ ticket }: { ticket: Ticket }) => {
     <div className="ticket px-5 py-6 sm:p-8">
       <div className="flex h-full flex-col justify-between">
         <div className="flex gap-4">
-          <img
-            className="h-14"
-            src="./src/assets/images/logo-mark.svg"
-            alt="Logo of Coding Conference 2025"
-          />
+          <img className="h-14" src={logo} alt="Logo of Coding Conference 2025" />
           <div>
             <p className="text-3xl font-bold text-box-trim sm:text-5xl">Coding Conf</p>
             <p className="text-lg opacity-70 sm:text-2xl mt-3">Jan 31, 2025 / Austin, TX</p>
