@@ -26,6 +26,8 @@ jobs:
 
       - name: Build app
         run: pnpm run build
+        env:
+          VITE_ENVIRONMENT: development
 
       - name: Lint code
         run: pnpm run lint
