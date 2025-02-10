@@ -21,11 +21,14 @@ jobs:
       - name: Setup Node and PNPM
         uses: ./.github/actions/setup-node
         
-      - name: Lint code
-        run: pnpm run lint
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build app
         run: pnpm run build
+
+      - name: Lint code
+        run: pnpm run lint
 
       - name: Deploy app to Vercel preview env
         uses: ./.github/actions/deploy-vercel

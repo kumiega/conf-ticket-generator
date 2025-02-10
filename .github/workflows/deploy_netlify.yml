@@ -21,11 +21,14 @@ jobs:
       - name: Configure node and PNPM
         uses: ./.github/actions/setup-node
 
-      - name: Lint code
-        run: npm run lint
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build app
-        run: npm run build
+        run: pnpm run build
+
+      - name: Lint code
+        run: pnpm run lint
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0
