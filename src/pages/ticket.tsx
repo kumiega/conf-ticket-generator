@@ -22,7 +22,7 @@ const Ticket = () => {
         Congrats, <GradientText>{ticket.fullName}</GradientText>!
       </Heading>
       <Paragraph>
-        Your ticket is ready. We've emailed your ticket to{' '}
+        Your ticket is ready. We&apos;ve emailed your ticket to{' '}
         <span className="text-orange-500">{ticket.email}</span> and will send updates in the run up
         to the event
       </Paragraph>

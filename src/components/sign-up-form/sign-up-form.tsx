@@ -1,5 +1,4 @@
-// SignUpForm.tsx
-import React, { use } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SignUpFormData, signUpSchema } from './schema';

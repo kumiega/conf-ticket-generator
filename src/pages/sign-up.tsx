@@ -6,7 +6,7 @@ const SignUp: React.FC = () => {
   return (
     <>
       <Heading>Your Journey to Coding Conf 2025 Starts Here!</Heading>
-      <Paragraph>✨ Secure your spot at next year's biggest coding conference.</Paragraph>
+      <Paragraph>✨ Secure your spot at next year&apos;s biggest coding conference.</Paragraph>
       <SignUpForm />
     </>
   );

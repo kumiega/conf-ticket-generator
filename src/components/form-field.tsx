@@ -17,7 +17,7 @@ const FormField = ({ label, placeholder, register, error, type = 'text' }: FormF
       <input
         id={register.name}
         className="w-full px-4 py-2 text-lg border border-neutral-700 rounded-md focus:outline-none focus:border-orange-500 hover:border-[var(--color-orange-500)]"
-        type="text"
+        type={type}
         placeholder={placeholder}
         {...register}
       />
