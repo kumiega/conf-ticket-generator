@@ -8,7 +8,7 @@ import iconInfo from '@/assets/images/icon-info.svg';
 
 interface UploadAvatarProps {
   error?: string;
-  setValue: UseFormSetValue<any>;
+  setValue: UseFormSetValue<{ avatar: File | null }>;
 }
 
 const UploadAvatar = ({ error, setValue }: UploadAvatarProps) => {

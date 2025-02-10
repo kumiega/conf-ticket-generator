@@ -1,4 +1,4 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import { createContext, useContext, ReactNode } from 'react';
 import { Config } from '../types/types';
 
 export const ConfigContext = createContext<Config>({} as Config);
