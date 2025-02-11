@@ -7,10 +7,10 @@ on:
 
 jobs:
   deploy-netlify:
-    uses: ./.github/workflows/deploy-netlify.yml
+    uses: ./.github/workflows/deploy_netlify.yml
     secrets: inherit
 
   deploy-vercel:
     needs: deploy-netlify
-    uses: ./.github/workflows/deploy-vercel.yml
+    uses: ./.github/workflows/deploy_vercel.yml
     secrets: inherit
