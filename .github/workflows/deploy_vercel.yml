@@ -34,7 +34,9 @@ jobs:
         run: pnpm run lint
 
       - name: Build app
-        run: VITE_ENVIRONMENT=staging pnpm run build
+        run: pnpm run build
+        env:
+          VITE_ENVIRONMENT: staging
 
       - name: Deploy app to Vercel production env
         uses: ./.github/actions/deploy-vercel

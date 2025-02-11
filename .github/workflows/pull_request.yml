@@ -25,7 +25,9 @@ jobs:
         run: pnpm install
 
       - name: Build app
-        run: VITE_ENVIRONMENT=preview pnpm run build
+        run: pnpm run build
+        env:
+          VITE_ENVIRONMENT: preview
 
       - name: Lint code
         run: pnpm run lint
