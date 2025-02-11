@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite",
+    "dev": "VITE_ENVIRONMENT=development vite",
     "lint": "eslint src",
     "test": "vitest src",
     "test:e2e": "npx playwright install && playwright test"

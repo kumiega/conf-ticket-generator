@@ -1,7 +1,9 @@
 import { Outlet } from 'react-router';
-import Background from './background';
-import Footer from './footer';
-import Logo from './logo';
+
+import Background from '@/components/background';
+import Footer from '@/components/footer';
+import Logo from '@/components/logo';
+import Version from '@/components/version';
 
 const AppLayout: React.FC = () => {
   return (
@@ -18,6 +20,7 @@ const AppLayout: React.FC = () => {
         <Footer />
       </div>
       <Background />
+      {import.meta.env.VITE_ENVIRONMENT !== 'production' && <Version />}
     </>
   );
 };
