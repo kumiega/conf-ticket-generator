@@ -18,5 +18,5 @@ runs:
       run: cd terraform && terraform init && terraform validate --no-color && terraform plan && terraform apply --auto-approve
       shell: bash
       env:
-        AWS_ACCESS_KEY_ID: ${{ inputs.AWS_ACCESS_KEY_ID }}  
-        AWS_SECRET_ACCESS_KEY: ${{ inputs.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ inputs.aws-access-key-id }}
+        AWS_SECRET_ACCESS_KEY: ${{ inputs.aws-secret-access-key }}
