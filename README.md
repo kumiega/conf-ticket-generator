@@ -1,6 +1,6 @@
-# Opanuj Frontend: AI Edition - Frontend Bootstrap
+# Conference ticket generator / Frontend Masters & Opanuj Frontend: AI Editon
 
-![](./_resources/img/header.png)
+W ramach szkolenia przygotowałem projekt służący do pracy nad zadaniami. Projekt opiera się o [rozbudowaną wersję zadania.](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w)
 
 ## Co w środku?
 
